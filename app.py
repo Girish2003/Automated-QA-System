@@ -18,12 +18,17 @@ genai.configure(api_key=st.secrets["general"]["GOOGLE_API_KEY"])
 
 
 def get_pdf_text(pdf_docs):
-    text=""
-    for pdf in pdf_docs:
-        pdf_reader= PdfReader(pdf)
+    text = ""
+    progress_bar = st.progress(0)
+    total_files = len(pdf_docs)
+
+    for i, pdf in enumerate(pdf_docs):
+        pdf_reader = PdfReader(pdf)
         for page in pdf_reader.pages:
-            text+= page.extract_text()
-    return  text
+            text += page.extract_text()
+        progress_bar.progress((i + 1) / total_files)  # Update progress
+    return text
+
 
 
 
