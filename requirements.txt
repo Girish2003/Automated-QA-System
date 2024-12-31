@@ -3,14 +3,6 @@ google-generativeai
 python-dotenv
 langchain
 PyPDF2
+chromadb
 faiss-cpu
 langchain_google_genai
-deep_translator
-langdetect
-pyttsx3
-PyAudio
-SpeechRecognition
-streamlit_authenticator
-gtts
-lingua-language-detector
-langchain-community
