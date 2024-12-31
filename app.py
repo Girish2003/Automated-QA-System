@@ -8,6 +8,11 @@ from langchain_community.vectorstores import FAISS
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain.chains.question_answering import load_qa_chain
 from langchain.prompts import PromptTemplate
+# from dotenv import load_dotenv
+
+# load_dotenv()
+# os.getenv("GOOGLE_API_KEY")
+# genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
 genai.configure(api_key=st.secrets["general"]["GOOGLE_API_KEY"])
 
@@ -87,6 +92,8 @@ def user_input(user_question):
 def main():
     st.set_page_config("Chat PDF")
     st.header("Chat with PDF using Gemini💁")
+    st.write(st.secrets["general"]["TEST"])
+
 
     user_question = st.text_input("Ask a Question from the PDF Files")
 
