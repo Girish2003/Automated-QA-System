@@ -7,4 +7,6 @@ venv/
 # Ignore Streamlit secrets
 .streamlit/secrets.toml
 
+config.yaml
+audio.mp3
 faiss_index

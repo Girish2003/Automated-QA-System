@@ -7,3 +7,11 @@ chromadb
 faiss-cpu
 langchain_google_genai
 langchain_community
+deep_translator
+langdetect
+pyttsx3
+PyAudio
+SpeechRecognition
+streamlit_authenticator
+gtts
+lingua-language-detector
